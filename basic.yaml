@@ -1,8 +1,10 @@
 ---
-- name: Basic tasks
+
+- name: Hello World Playbook
+  hosts: all
   tasks:
-    - name: Execute uptime command
-      command: uptime
-      register: uptime_result
-    - debug: var=uptime_result.stdout_lines
+    - name: Print message
+      ansible.builtin.command: echo "Hello World"
+      environment:
+        ANSIBLE_STDOUT_CALLBACK: community.general.yaml
 
