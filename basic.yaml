@@ -1,6 +1,5 @@
 ---
 - name: Basic tasks
-  hosts: all
   tasks:
     - name: Execute uptime command
       command: uptime
